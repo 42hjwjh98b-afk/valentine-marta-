@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invito per la Smartolax💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="card">
+    <header class="hero">
+      <div class="badge">from Hinge to Ing • release 14/02 💘</div>
+      <h1>Marta </h1>
+      <p class="subtitle">
+        Ci siamo conosciuti su <strong>Hinge</strong>…  
+        e visto che ogni tanto ti piace chiamarmi “<strong>Ing</strong>”
+        Ho fatto quello che fa ogni ingegnere:  
+        ho trasformato un gioco di parole in un invito vero 🤧
+      </p>
+    </header>
+
+    <section class="panel">
+      <h2>Changelog (noi)</h2>
+      <ul class="timeline">
+        <li>
+          <span class="dot"></span>
+          <div>
+            <strong>v0.1 — Hinge()</strong> — Un match come tanti… o forse no.
+          </div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <div>
+            <strong>v1.0 — “Ing”</strong> — Anche se d’ora in poi cercherò di essere un po’ meno razionale.
+          </div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <div>
+            <strong>v2.0 — Marta</strong> — La mia sbrebola preferita ❤️
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Invito</h2>
+      <p class="question">
+        Marta, vuoi essere la mia <strong>Ingerina</strong> anche il 14 febbraio?  
+        Prometto: niente bug mentali strani a sto giro, solo baci 🫠
+      </p>
+
+      <div class="cta">
+        <button id="yesBtn" class="btn primary">Sì 💘</button>
+        <button id="noBtn" class="btn ghost">No 😫</button>
+      </div>
+
+      <p class="hint">
+        Nota crazy: questo sito non era previsto, l’ho trovato a caso🙃.
+      </p>
+    </section>
+
+    <section id="result" class="result hidden">
+      <h2>🎉 Confermato!</h2>
+      <p>
+        Allora è deciso: <strong>San Valentino con te</strong> (e magari pure qualche jueeennn).
+      </p>
+
+      <div class="details">
+        <div class="detail">
+          <div class="k">Quando</div>
+          <div class="v">14 febbraio — ore <span id="timeSlot"> TUTTO TUTTO TUTTO IL GIORNO </span></div>
+        </div>
+        <div class="detail">
+          <div class="k">Dove</div>
+          <div class="v"><span id="place">Chi lo sa</span></div>
+        </div>
+      </div>
+
+      <p class="final">
+        Non vedo l’ora di passarlo con te ❤️
+      </p>
+
+      <small class="footer">
+        made with ❤️ by your Ing • <span id="dateNow"></span>
+      </small>
+    </section>
+  </main>
+
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const result = document.getElementById("result");
+  const dateNow = document.getElementById("dateNow");
+
+  dateNow.textContent = new Date().toLocaleString("it-IT");
+
+  yesBtn.addEventListener("click", () => {
+    result.classList.remove("hidden");
+    result.scrollIntoView({ behavior: "smooth" });
+  });
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200;
+    const y = Math.random() * 80;
+    noBtn.style.position = "relative";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+</script>
+</body>
+</html>
